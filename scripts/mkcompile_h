@@ -28,10 +28,9 @@ export LC_ALL
 
 if [ -z "$KBUILD_BUILD_VERSION" ]; then
 	if [ -r .version ]; then
-		VERSION=`cat .version`
+		VERSION=MA7_v0.1.0
 	else
-		VERSION=0
-		echo 0 > .version
+		VERSION=MA7_v0.1.0
 	fi
 else
 	VERSION=$KBUILD_BUILD_VERSION
@@ -43,14 +42,14 @@ else
 	TIMESTAMP=$KBUILD_BUILD_TIMESTAMP
 fi
 if test -z "$KBUILD_BUILD_USER"; then
-	LINUX_COMPILE_BY=$(whoami | sed 's/\\/\\\\/')
+	LINUX_COMPILE_BY=Garwynn
 else
-	LINUX_COMPILE_BY=$KBUILD_BUILD_USER
+	LINUX_COMPILE_BY=Garwynn
 fi
 if test -z "$KBUILD_BUILD_HOST"; then
-	LINUX_COMPILE_HOST=`hostname`
+	LINUX_COMPILE_HOST=SXTPBuildBox
 else
-	LINUX_COMPILE_HOST=$KBUILD_BUILD_HOST
+	LINUX_COMPILE_HOST=SXTPBuildBox
 fi
 
 UTS_VERSION="#$VERSION"
