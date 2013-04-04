@@ -28,12 +28,12 @@ export LC_ALL
 
 if [ -z "$KBUILD_BUILD_VERSION" ]; then
 	if [ -r .version ]; then
-		VERSION=MA7_v0.2.2
+		VERSION=MA7_v0.2.3
 	else
-		VERSION=MA7_v0.2.2
+		VERSION=MA7_v0.2.3
 	fi
 else
-	VERSION=$KBUILD_BUILD_VERSION
+	VERSION=MA7_v0.2.3
 fi
 
 if [ -z "$KBUILD_BUILD_TIMESTAMP" ]; then
